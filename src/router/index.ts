@@ -16,16 +16,11 @@ const routes:RouteConfig[] = [
         component:()=>import( /* webpackChunkName: 'about', webpackPrefetch: true */ '../views/about/About.vue')
     },
     {
-        path: `/error`,
+        path: `/404`,
         name: '404',
         component:()=>import( /* webpackChunkName: 'error', webpackPrefetch: true */ '../views/error/404.vue')
     },
-    {
-        path: '*',
-        redirect: {
-            name: '404'
-        }
-    }
+    { path: '*', redirect: '/404',}
 ]
 
 

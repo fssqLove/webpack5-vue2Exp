@@ -7,6 +7,7 @@ module.exports = {
   output: {
     filename: 'js/[name].[contenthash:10].js',
     path: path.resolve(__dirname, 'dist'),
+    publicPath: '/'
   },
   plugins: [
     new HtmlWebpackPlugin({ template: './index.html' }),
