@@ -10,7 +10,7 @@ module.exports = merge(common, {
         compress: true,
         // 端口号
         port: 8080,
-        open: true,
+        // open: true,
         hot: true,
     },
     module: {

@@ -53,5 +53,8 @@ module.exports = {
   resolve: {
     // 配置省略文件路径的后缀名
     extensions: ['.vue', '.tsx', '.ts', '.js'],
+    alias: {
+      "@": path.resolve(__dirname, 'src'),
+    },
   },
 };

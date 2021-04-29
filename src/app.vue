@@ -19,7 +19,7 @@
 
 <script lang="ts">
 import Vue from "vue";
-import { add } from "./assets/js/test";
+import { add } from "@/assets/js/test";
 import myImg from "./components/myImg.vue";
 
 export default Vue.extend({
@@ -51,9 +51,9 @@ export default Vue.extend({
   }
 
   .bk {
-    width: 100px;
-    height: 100px;
-    background: center / contain no-repeat url("./assets/img/2.jpg");
+    width: 200px;
+    height: 200px;
+    background: center / contain no-repeat url("@/assets/img/2.jpg");
   }
 }
 </style>
