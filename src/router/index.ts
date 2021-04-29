@@ -13,13 +13,25 @@ const routes:RouteConfig[] = [
     {
         path:'/about',
         name:'About',
-        component:()=>import(/* webpackChunkName: "about" */ '../views/about/About.vue')
+        component:()=>import( /* webpackChunkName: 'about', webpackPrefetch: true */ '../views/about/About.vue')
+    },
+    {
+        path: `/error`,
+        name: '404',
+        component:()=>import( /* webpackChunkName: 'error', webpackPrefetch: true */ '../views/error/404.vue')
+    },
+    {
+        path: '*',
+        redirect: {
+            name: '404'
+        }
     }
 ]
 
 
 const router = new VueRouter({
     routes,
+    mode:"history"
 })
 
 
