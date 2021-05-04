@@ -10,5 +10,23 @@
 <body>
     <div id="app"></div>
 </body>
+<script lang="javascript">
+    function isMobile() {
+        var ua = navigator.userAgent
+        return ua && !!ua.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)
+    }
 
+    if(isMobile()){
+        var path = location.pathname
+        var search = location.search || ''
+
+        if(!/\/m\//.test(path)){
+            var pushMobile = path.replace('/pc/','/m/')
+            location.href = location.origin + pushMobile + search
+        }
+
+        var deviceWidth = document.documentElement.clientWidth
+        document.documentElement.style.fontSize = (deviceWidth / 750) * 100 + 'px'
+    }
+</script>
 </html>
